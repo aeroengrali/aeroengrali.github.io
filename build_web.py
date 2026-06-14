@@ -273,8 +273,8 @@ proj(id="09-morphobot-fyp", slug="morphobot-digital-twin",
      outcomes="A hardware-paired digital-twin workflow spanning flight dynamics, control, estimation "
               "and mode transition for a transforming robot.",
      tech=["MATLAB / Simulink", "Stateflow"],
-     note="Intentionally high level. Quantitative results, parameter values and the full thesis are "
-          "withheld until the project is defended.",
+     note="Intentionally high level. Quantitative results, parameter values and the full project "
+          "report are withheld until the project is defended.",
      figs=[("09-morphobot-fyp", "contact_sheet.png", "CAD part set of the transforming quadcopter (motor-in-wheel drive, lift arms, gearboxes, wheels)."),
            ("09-morphobot-fyp", "hardware_01.jpg", "The distinctive motor-in-wheel hardware assembly."),
            ("09-morphobot-fyp", "hardware_03.jpg", "The physical build of the morphobot.")])
@@ -444,7 +444,7 @@ def head(title, desc, depth=0, og_img="og.png", page_url=SITE["url"]):
 <nav aria-label="Primary"><a href="{up}index.html#projects">Projects</a><a href="{up}index.html#skills">Skills</a><a href="{up}index.html#about">About</a><a href="{up}index.html#contact">Contact</a></nav>
 </div></header>'''
 
-def foot():
+def foot(script=""):
     return f'''<footer class="foot" id="contact"><div class="wrap">
 <h2>Get in touch</h2>
 <p>Open to GNC, flight-control, simulation and aerospace R&amp;D roles, internships and graduate study.</p>
@@ -454,7 +454,7 @@ def foot():
 <a href="{SITE['linkedin']}" rel="noopener">LinkedIn</a> &middot;
 <span>{esc(SITE['location'])}</span></p>
 <p class="fine">© 2026 Ali Murtaza &middot; {esc(SITE['grad'])}</p>
-</div></footer></body></html>'''
+</div></footer>{script}</body></html>'''
 
 def card(p):
     tags = "".join(f'<span class="tag">{esc(c)}</span>' for c in p["cats"][:2])
@@ -518,7 +518,7 @@ def build_index():
 </div></section>
 </main>
 '''
-    doc += foot() + '<script src="app.js"></script>'
+    doc += foot('<script src="app.js"></script>')
     with open(os.path.join(OUT, "index.html"), "w", encoding="utf-8") as f: f.write(doc)
 
 def build_project(p):
@@ -540,6 +540,7 @@ def build_project(p):
     links = ""
     if p.get("repo"): links += f'<a class="btn" href="{esc(p["repo"])}" rel="noopener">Source on GitHub &rarr;</a>'
     if p.get("demo"): links += f'<a class="btn ghost" href="../{p["demo"]}">Open 3D demo</a>'
+    cta_html = f'<div class="cta">{links}</div>' if links else ''
     tags = "".join(f'<span class="tag alt">{esc(c)}</span>' for c in p["cats"])
     tech = "".join(f'<span class="tag">{esc(t)}</span>' for t in p["tech"])
     doc += f'''
@@ -560,7 +561,7 @@ def build_project(p):
 {demo}
 <section class="psec"><h2>What it demonstrates</h2><p>{esc(p['outcomes'])}</p></section>
 <section class="psec"><h2>Built with</h2><div class="tags">{tech}</div>
-<div class="cta">{links}</div></section>
+{cta_html}</section>
 </div></main>
 '''
     doc += foot()
@@ -569,6 +570,10 @@ def build_project(p):
 def build_demo():
     src = '''<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"><title>Quadcopter attitude (3D demo)</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Quadcopter Attitude Control - Interactive 3D Demo">
+<meta property="og:image" content="https://aeroengrali.github.io/og.png">
+<meta name="twitter:card" content="summary_large_image">
 <style>html,body{margin:0;height:100%;background:#0b1f33;color:#cfe2f5;font:14px system-ui;overflow:hidden}
 #hud{position:fixed;left:12px;top:10px;background:rgba(8,21,34,.7);padding:8px 12px;border-radius:8px;line-height:1.5}
 #hud b{color:#fff}.sr{position:absolute;left:-9999px}</style></head><body>
