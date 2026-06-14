@@ -12,7 +12,7 @@ ASSETS = os.path.join(OUT, "assets", "projects")
 
 SITE = {
     "name": "Ali Murtaza",
-    "role": "Aerospace Engineer (Guidance, Navigation & Control)",
+    "role": "Aerospace Engineering (Guidance, Navigation & Control)",
     "tagline": "Final-year BS Aerospace Engineering student building flight-control, "
                "state-estimation and simulation projects in MATLAB/Simulink and C++.",
     "location": "Islamabad, Pakistan",
@@ -52,7 +52,7 @@ proj(id="01-quadcopter-attitude-control", slug="quadcopter-attitude-control",
              "anti-windup. Tuned to a crisp, low-overshoot response and tested against a "
              "torque-pulse disturbance.",
      highlights=["Rise time 0.45 s, settling 0.69 s, overshoot 1.2%, steady-state error 0.07°",
-                 "Disturbance pulse rejected within 0.5 s",
+                 "Disturbance pulse (0.05 N·m) recovered to <0.5° in 0.80 s",
                  "1 kHz fixed-step RK4 plant with rate-gyro noise and ±0.6 N·m saturation",
                  "Interactive 3D viewer driven by the simulated attitude"],
      tech=["MATLAB R2026a", "Cascaded PID", "RK4 integration"],
@@ -70,7 +70,7 @@ proj(id="02-gnss-ins-nav", slug="gnss-ins-navigation",
      summary="A strapdown inertial navigator fused with 1 Hz GPS by an Extended Kalman Filter "
              "that estimates position, velocity, heading and the IMU biases. A 25 s GPS dropout "
              "shows inertial coasting (dead reckoning) versus unaided INS drift.",
-     highlights=["EKF horizontal RMS 2.5 m (at the GPS noise floor)",
+     highlights=["EKF horizontal RMS 2.5 m (below the ~3.5 m raw-GPS 2D scatter)",
                  "Dropout error bounded to ~9.5 m over 25 s; unaided INS drifts ~500 m",
                  "Gyro/accel biases recovered to within ~2% of truth",
                  "Analytic EKF Jacobian; shared mechanisation isolates the value of fusion"],
@@ -122,8 +122,8 @@ proj(id="05-gnss-spp-ekf", slug="gps-spp-ekf",
      summary="A GPS-only pseudorange positioning engine in modern C++17: RINEX 3.x parsing, "
              "broadcast orbit/clock modelling, weighted least squares and an EKF, validated "
              "against precise IGS SP3 orbits with an independent Python audit.",
-     highlights=["North RMS 0.54 m, horizontal ~0.93 m (public IGS station, GPS-only static)",
-                 "Broadcast-vs-precise orbit 3D RMS 1.56 m; full-day EKF 3D RMS 3.14 m",
+     highlights=["Full-day EKF 3D RMS 2.03 m, improving on least squares (2.52 m)",
+                 "Broadcast orbits agree with precise IGS SP3 to a few metres (95th-pct 3D 2.37 m)",
                  "RINEX 3.x observation/navigation parsing, ephemeris health/fit checks",
                  "Deterministic tests plus an independent Python results audit"],
      tech=["C++17", "CMake / Ninja", "RINEX, SP3", "EKF & WLS"],
@@ -187,7 +187,7 @@ proj(id="09-morphobot-fyp", slug="morphobot-digital-twin",
                  "Cascaded PID flight control and ESKF state estimation",
                  "Mode supervisor and controlled hover ↔ rover transition",
                  "Hardware-paired digital-twin workflow (motor-in-wheel build)"],
-     tech=["MATLAB / Simulink", "Stateflow", "Simscape"],
+     tech=["MATLAB / Simulink", "Stateflow"],
      note="High-level entry. Quantitative results and the full thesis are withheld until the FYP is defended.",
      images=[("contact_sheet.png", "CAD part set of the transforming quadcopter"),
              ("hardware_01.jpg", "Motor-in-wheel hardware assembly"),
@@ -320,7 +320,7 @@ def build_index():
 <section id="about" class="sec"><div class="wrap about">
 <h2>About</h2>
 <p>I am a final-year BS Aerospace Engineering student at the Institute of Space Technology, Islamabad, focused on guidance, navigation and control. I build flight-control, estimation and simulation systems in MATLAB/Simulink and C++, and I care about getting the engineering right: honest models, verified results, and clear documentation.</p>
-<p>Recent work spans cascaded flight control, GNSS/INS sensor fusion with Kalman filtering, aircraft mode analysis, spacecraft attitude control, and a from-scratch GNSS positioning engine in C++. My final-year project is a hardware-paired digital twin of a transforming rover-hover quadcopter.</p>
+<p>Recent work spans cascaded flight control, a GNSS/INS navigation filter built around an Extended Kalman Filter, aircraft mode analysis, spacecraft attitude control, and a from-scratch GNSS positioning engine in C++. My final-year project is a hardware-paired digital twin of a transforming rover-hover quadcopter.</p>
 </div></section>
 </main>
 '''
@@ -383,7 +383,8 @@ def build_demo():
 <meta name="viewport" content="width=device-width, initial-scale=1"><title>Quadcopter attitude (3D demo)</title>
 <style>html,body{margin:0;height:100%;background:#0b1f33;color:#cfe2f5;font:14px system-ui;overflow:hidden}
 #hud{position:fixed;left:12px;top:10px;background:rgba(8,21,34,.7);padding:8px 12px;border-radius:8px;line-height:1.5}
-#hud b{color:#fff}</style></head><body>
+#hud b{color:#fff}.sr{position:absolute;left:-9999px;top:auto}</style></head><body>
+<h1 class="sr">Quadcopter Attitude Control: Interactive 3D Demo</h1>
 <div id="hud">Quadcopter attitude (simulated)<br><span id="t">t = 0.0 s</span> · <span id="rpy">roll 0° pitch 0° yaw 0°</span><br><span style="opacity:.7">drag to orbit · loops automatically</span></div>
 <script type="module">
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js';
