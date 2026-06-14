@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="GNSS/INS Loosely-Coupled Navigation">
+<defs>
+<linearGradient id="bg02" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#0c2236"/><stop offset="1" stop-color="#081320"/></linearGradient>
+<radialGradient id="gl02" cx="0.82" cy="0.22" r="0.6">
+<stop offset="0" stop-color="#1aa37a" stop-opacity="0.28"/><stop offset="1" stop-color="#1aa37a" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1200" height="630" fill="url(#bg02)"/>
+<rect width="1200" height="630" fill="url(#gl02)"/>
+<rect x="0" y="0" width="12" height="630" fill="#1aa37a"/>
+<path d="M760 470 C 880 360, 980 420, 1140 200" fill="none" stroke="#1aa37a" stroke-width="2.5" opacity="0.8" stroke-dasharray="2 10" stroke-linecap="round"/><g fill="#1aa37a" opacity="0.85"><circle cx="820" cy="426" r="5"/><circle cx="940" cy="392" r="5"/><circle cx="1060" cy="300" r="5"/></g><circle cx="1140" cy="200" r="9" fill="#eaf2fb"/>
+<text x="1150" y="150" text-anchor="end" font-family="system-ui,Segoe UI,Arial" font-weight="800" font-size="150" fill="#ffffff" opacity="0.05">02</text>
+<text x="70" y="120" font-family="system-ui,Segoe UI,Arial" font-weight="700" font-size="22" letter-spacing="3" fill="#1aa37a">ESTIMATION &amp; NAVIGATION</text>
+<text x="70" y="290" font-family="system-ui,Segoe UI,Arial" font-weight="800" font-size="56" fill="#ffffff"><tspan x="70" dy="0">GNSS/INS Loosely-Coupled</tspan><tspan x="70" dy="66">Navigation</tspan></text>
+<text x="70" y="408" font-family="system-ui,Segoe UI,Arial" font-size="27" fill="#aac3dc">8-state EKF fusing IMU and GPS, with online bias estimation</text>
+<g transform="translate(70,520)"><rect width="142" height="34" rx="17" fill="#ffffff" opacity="0.08"/><text x="71" y="22" text-anchor="middle" fill="#cfe0f1" font-size="15" font-family="system-ui,Segoe UI,Arial">MATLAB R2026a</text></g><g transform="translate(223.6,520)"><rect width="224" height="34" rx="17" fill="#ffffff" opacity="0.08"/><text x="112" y="22" text-anchor="middle" fill="#cfe0f1" font-size="15" font-family="system-ui,Segoe UI,Arial">Extended Kalman Filter</text></g><g transform="translate(460.0,520)"><rect width="142" height="34" rx="17" fill="#ffffff" opacity="0.08"/><text x="71" y="22" text-anchor="middle" fill="#cfe0f1" font-size="15" font-family="system-ui,Segoe UI,Arial">Strapdown INS</text></g>
+<text x="1150" y="545" text-anchor="end" font-family="system-ui,Segoe UI,Arial" font-size="20" fill="#7f9cb6">May 2026</text>
+</svg>

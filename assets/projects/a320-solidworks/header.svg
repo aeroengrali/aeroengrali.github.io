@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Airbus A320 SolidWorks CAD">
+<defs>
+<linearGradient id="bg08" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#0c2236"/><stop offset="1" stop-color="#081320"/></linearGradient>
+<radialGradient id="gl08" cx="0.82" cy="0.22" r="0.6">
+<stop offset="0" stop-color="#2bb3c0" stop-opacity="0.28"/><stop offset="1" stop-color="#2bb3c0" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1200" height="630" fill="url(#bg08)"/>
+<rect width="1200" height="630" fill="url(#gl08)"/>
+<rect x="0" y="0" width="12" height="630" fill="#2bb3c0"/>
+<g fill="none" stroke="#2bb3c0" stroke-width="2" opacity="0.65" transform="translate(980,180)"><path d="M0 -70 L70 -35 L70 45 L0 80 L-70 45 L-70 -35 Z"/><path d="M0 -70 L0 10 M0 10 L70 45 M0 10 L-70 45"/></g>
+<text x="1150" y="150" text-anchor="end" font-family="system-ui,Segoe UI,Arial" font-weight="800" font-size="150" fill="#ffffff" opacity="0.05">08</text>
+<text x="70" y="120" font-family="system-ui,Segoe UI,Arial" font-weight="700" font-size="22" letter-spacing="3" fill="#2bb3c0">CAD</text>
+<text x="70" y="318" font-family="system-ui,Segoe UI,Arial" font-weight="800" font-size="56" fill="#ffffff"><tspan x="70" dy="0">Airbus A320 SolidWorks CAD</tspan></text>
+<text x="70" y="370" font-family="system-ui,Segoe UI,Arial" font-size="27" fill="#aac3dc">Solid model with dimensioned drawings and renders</text>
+<g transform="translate(70,520)"><rect width="114" height="34" rx="17" fill="#ffffff" opacity="0.08"/><text x="57" y="22" text-anchor="middle" fill="#cfe0f1" font-size="15" font-family="system-ui,Segoe UI,Arial">SolidWorks</text></g><g transform="translate(196.0,520)"><rect width="197" height="34" rx="17" fill="#ffffff" opacity="0.08"/><text x="98" y="22" text-anchor="middle" fill="#cfe0f1" font-size="15" font-family="system-ui,Segoe UI,Arial">Engineering drawing</text></g><g transform="translate(404.79999999999995,520)"><rect width="105" height="34" rx="17" fill="#ffffff" opacity="0.08"/><text x="52" y="22" text-anchor="middle" fill="#cfe0f1" font-size="15" font-family="system-ui,Segoe UI,Arial">Rendering</text></g>
+<text x="1150" y="545" text-anchor="end" font-family="system-ui,Segoe UI,Arial" font-size="20" fill="#7f9cb6">Jul 2024</text>
+</svg>

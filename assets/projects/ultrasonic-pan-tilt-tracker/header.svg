@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Ultrasonic Pan-Tilt Object Tracker">
+<defs>
+<linearGradient id="bg06" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#0c2236"/><stop offset="1" stop-color="#081320"/></linearGradient>
+<radialGradient id="gl06" cx="0.82" cy="0.22" r="0.6">
+<stop offset="0" stop-color="#e8743b" stop-opacity="0.28"/><stop offset="1" stop-color="#e8743b" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1200" height="630" fill="url(#bg06)"/>
+<rect width="1200" height="630" fill="url(#gl06)"/>
+<rect x="0" y="0" width="12" height="630" fill="#e8743b"/>
+<g stroke="#e8743b" stroke-width="2" fill="none" opacity="0.6"><path d="M820 140 H960 V260 H1110"/><path d="M820 240 H900 V160 H1110"/></g><g fill="#e8743b"><circle cx="820" cy="140" r="6"/><circle cx="820" cy="240" r="6"/><circle cx="1110" cy="260" r="6"/><circle cx="1110" cy="160" r="6"/></g>
+<text x="1150" y="150" text-anchor="end" font-family="system-ui,Segoe UI,Arial" font-weight="800" font-size="150" fill="#ffffff" opacity="0.05">06</text>
+<text x="70" y="120" font-family="system-ui,Segoe UI,Arial" font-weight="700" font-size="22" letter-spacing="3" fill="#e8743b">EMBEDDED</text>
+<text x="70" y="290" font-family="system-ui,Segoe UI,Arial" font-weight="800" font-size="56" fill="#ffffff"><tspan x="70" dy="0">Ultrasonic Pan-Tilt Object</tspan><tspan x="70" dy="66">Tracker</tspan></text>
+<text x="70" y="408" font-family="system-ui,Segoe UI,Arial" font-size="27" fill="#aac3dc">Scan-and-track on Arduino Mega 2560</text>
+<g transform="translate(70,520)"><rect width="160" height="34" rx="17" fill="#ffffff" opacity="0.08"/><text x="80" y="22" text-anchor="middle" fill="#cfe0f1" font-size="15" font-family="system-ui,Segoe UI,Arial">Arduino (C/C++)</text></g><g transform="translate(242.0,520)"><rect width="142" height="34" rx="17" fill="#ffffff" opacity="0.08"/><text x="71" y="22" text-anchor="middle" fill="#cfe0f1" font-size="15" font-family="system-ui,Segoe UI,Arial">HC-SR04 sonar</text></g><g transform="translate(395.6,520)"><rect width="142" height="34" rx="17" fill="#ffffff" opacity="0.08"/><text x="71" y="22" text-anchor="middle" fill="#cfe0f1" font-size="15" font-family="system-ui,Segoe UI,Arial">Servo control</text></g>
+<text x="1150" y="545" text-anchor="end" font-family="system-ui,Segoe UI,Arial" font-size="20" fill="#7f9cb6">2024</text>
+</svg>

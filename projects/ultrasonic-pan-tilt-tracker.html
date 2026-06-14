@@ -1,7 +1,15 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ultrasonic Pan-Tilt Object Tracker | Ali Murtaza</title>
-<meta name="description" content="An embedded sonar-guided tracker: three HC-SR04 ultrasonic sensors feed a control loop that drives a dual-servo pan/tilt head to centre the nearest object, with a raster search sweep when no target is in range.">
+<meta name="description" content="An embedded sonar-guided tracker: three HC-SR04 ultrasonic sensors feed a control loop that drives a dual-servo pan/tilt head to centre the nearest object,">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icon-180.png">
+<meta property="og:title" content="Ultrasonic Pan-Tilt Object Tracker | Ali Murtaza">
+<meta property="og:description" content="An embedded sonar-guided tracker: three HC-SR04 ultrasonic sensors feed a control loop that drives a dual-servo pan/tilt head to centre the nearest object,">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aeroengrali.github.io/projects/ultrasonic-pan-tilt-tracker.html">
+<meta property="og:image" content="https://aeroengrali.github.io/assets/projects/ultrasonic-pan-tilt-tracker/header.svg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link rel="stylesheet" href="../style.css">
 </head><body>
@@ -10,29 +18,32 @@
 <a class="brand" href="../index.html">Ali&nbsp;Murtaza</a>
 <nav aria-label="Primary"><a href="../index.html#projects">Projects</a><a href="../index.html#skills">Skills</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a></nav>
 </div></header>
-<main id="main" class="proj">
-<div class="wrap">
-<p class="crumb"><a href="../index.html#projects">← All projects</a></p>
-<p class="eyebrow">2024</p>
+<main id="main" class="proj"><div class="wrap">
+<p class="crumb"><a href="../index.html#projects">&larr; All projects</a></p>
+<div class="pbanner"><img src="../assets/projects/ultrasonic-pan-tilt-tracker/header.svg" alt="Ultrasonic Pan-Tilt Object Tracker cover" width="1200" height="630"></div>
 <h1>Ultrasonic Pan-Tilt Object Tracker</h1>
 <p class="lede">Scan-and-track on Arduino Mega 2560</p>
-<div class="tags"><span class="tag alt">Embedded</span></div>
-<p class="overview">An embedded sonar-guided tracker: three HC-SR04 ultrasonic sensors feed a control loop that drives a dual-servo pan/tilt head to centre the nearest object, with a raster search sweep when no target is in range.</p>
+<div class="tags"><span class="tag alt">Embedded</span> <span class="period">2024</span></div>
 
-<div class="cta"><a class="btn" href="https://github.com/aeroengrali/ultrasonic-pan-tilt-tracker" rel="noopener">Source on GitHub</a></div>
 
-<section class="psec"><h2>Highlights</h2><ul class="hl"><li>Arduino Mega 2560, 3× HC-SR04 (5 V, 2-400 cm), dual servos, LED</li><li>Multi-sensor bearing estimation from left/centre/right ranges</li><li>Closed-loop pan/tilt actuation with a search/track state machine</li><li>Real-time embedded C/C++ on constrained hardware</li></ul></section>
+<section class="psec"><h2>Overview</h2><p class="overview">An embedded sonar-guided tracker: three HC-SR04 ultrasonic sensors feed a control loop that drives a dual-servo pan/tilt head to centre the nearest object, with a raster search sweep when no target is in range.</p></section>
+<section class="psec"><h2>The challenge</h2><p>With only three cheap range sensors and a microcontroller, infer where the nearest object is and keep a pan/tilt head pointed at it in real time.</p></section>
+<section class="psec"><h2>Approach</h2>
+<div class="diagram"><img src="../assets/projects/ultrasonic-pan-tilt-tracker/diagram.svg" alt="Pipeline diagram for Ultrasonic Pan-Tilt Object Tracker"></div>
+<ul class="approach"><li>Three HC-SR04 sensors give left/centre/right distances via echo timing</li><li>Decision logic finds the bearing of the closest in-range object</li><li>Dual servos pan and tilt to centre the target; an LED signals lock</li><li>A raster search sweep runs when nothing is in range</li></ul></section>
+<section class="psec"><h2>Results</h2><div class="metricwrap"><table class="metrics"><tbody><tr><td>Platform</td><td>Arduino Mega 2560</td></tr><tr><td>Sensors</td><td>3x HC-SR04 (2-400 cm)</td></tr><tr><td>Actuation</td><td>dual-servo pan/tilt</td></tr><tr><td>Language</td><td>C/C++</td></tr></tbody></table></div></section>
 
-<section class="psec"><h2>Results &amp; figures</h2><div class="gallery"><figure><img loading="lazy" src="../assets/projects/ultrasonic-pan-tilt-tracker/diagram.svg" alt="Sense → decide → actuate pipeline of the ultrasonic tracker"><figcaption>Sense → decide → actuate pipeline of the ultrasonic tracker</figcaption></figure></div></section>
-<section class="psec"><h2>Built with</h2><div class="tags"><span class="tag">Arduino (C/C++)</span><span class="tag">HC-SR04 sonar</span><span class="tag">Servo control</span></div></section>
+<section class="psec"><h2>What it demonstrates</h2><p>Demonstrates embedded real-time sensing, multi-sensor bearing estimation, closed-loop actuator control, and a search/track state machine on constrained hardware.</p></section>
+<section class="psec"><h2>Built with</h2><div class="tags"><span class="tag">Arduino (C/C++)</span><span class="tag">HC-SR04 sonar</span><span class="tag">Servo control</span></div>
+<div class="cta"><a class="btn" href="https://github.com/aeroengrali/ultrasonic-pan-tilt-tracker" rel="noopener">Source on GitHub &rarr;</a></div></section>
 </div></main>
 <footer class="foot" id="contact"><div class="wrap">
-<h2>Contact</h2>
+<h2>Get in touch</h2>
 <p>Open to GNC, flight-control, simulation and aerospace R&amp;D roles, internships and graduate study.</p>
 <p class="links">
-<a href="mailto:aero.engr.ali@gmail.com">aero.engr.ali@gmail.com</a> ·
-<a href="https://github.com/aeroengrali" rel="noopener">GitHub</a> ·
-<a href="https://www.linkedin.com/in/aeroengrali/" rel="noopener">LinkedIn</a> ·
+<a href="mailto:aero.engr.ali@gmail.com">aero.engr.ali@gmail.com</a> &middot;
+<a href="https://github.com/aeroengrali" rel="noopener">GitHub</a> &middot;
+<a href="https://www.linkedin.com/in/aeroengrali/" rel="noopener">LinkedIn</a> &middot;
 <span>Islamabad, Pakistan</span></p>
-<p class="fine">© 2026 Ali Murtaza · BS Aerospace Engineering, Institute of Space Technology (IST), expected August 2026</p>
+<p class="fine">© 2026 Ali Murtaza &middot; BS Aerospace Engineering, Institute of Space Technology (IST), expected August 2026</p>
 </div></footer></body></html>

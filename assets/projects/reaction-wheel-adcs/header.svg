@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Reaction-Wheel Satellite ADCS">
+<defs>
+<linearGradient id="bg04" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#0c2236"/><stop offset="1" stop-color="#081320"/></linearGradient>
+<radialGradient id="gl04" cx="0.82" cy="0.22" r="0.6">
+<stop offset="0" stop-color="#e0a82e" stop-opacity="0.28"/><stop offset="1" stop-color="#e0a82e" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1200" height="630" fill="url(#bg04)"/>
+<rect width="1200" height="630" fill="url(#gl04)"/>
+<rect x="0" y="0" width="12" height="630" fill="#e0a82e"/>
+<g stroke="#e0a82e" stroke-width="2" fill="none" opacity="0.6"><ellipse cx="1000" cy="200" rx="220" ry="90" transform="rotate(18 1000 200)"/></g><g transform="translate(980,150)" fill="#e0a82e" opacity="0.85"><rect x="-16" y="-12" width="32" height="24" rx="3"/><rect x="-60" y="-6" width="36" height="12" opacity="0.6"/><rect x="24" y="-6" width="36" height="12" opacity="0.6"/></g>
+<text x="1150" y="150" text-anchor="end" font-family="system-ui,Segoe UI,Arial" font-weight="800" font-size="150" fill="#ffffff" opacity="0.05">04</text>
+<text x="70" y="120" font-family="system-ui,Segoe UI,Arial" font-weight="700" font-size="22" letter-spacing="3" fill="#e0a82e">SPACECRAFT</text>
+<text x="70" y="290" font-family="system-ui,Segoe UI,Arial" font-weight="800" font-size="56" fill="#ffffff"><tspan x="70" dy="0">Reaction-Wheel Satellite</tspan><tspan x="70" dy="66">ADCS</tspan></text>
+<text x="70" y="408" font-family="system-ui,Segoe UI,Arial" font-size="27" fill="#aac3dc">Quaternion-feedback slew with momentum management</text>
+<g transform="translate(70,520)"><rect width="142" height="34" rx="17" fill="#ffffff" opacity="0.08"/><text x="71" y="22" text-anchor="middle" fill="#cfe0f1" font-size="15" font-family="system-ui,Segoe UI,Arial">MATLAB R2026a</text></g><g transform="translate(223.6,520)"><rect width="188" height="34" rx="17" fill="#ffffff" opacity="0.08"/><text x="94" y="22" text-anchor="middle" fill="#cfe0f1" font-size="15" font-family="system-ui,Segoe UI,Arial">Quaternion control</text></g><g transform="translate(423.2,520)"><rect width="160" height="34" rx="17" fill="#ffffff" opacity="0.08"/><text x="80" y="22" text-anchor="middle" fill="#cfe0f1" font-size="15" font-family="system-ui,Segoe UI,Arial">Reaction wheels</text></g>
+<text x="1150" y="545" text-anchor="end" font-family="system-ui,Segoe UI,Arial" font-size="20" fill="#7f9cb6">May-Jun 2026</text>
+</svg>

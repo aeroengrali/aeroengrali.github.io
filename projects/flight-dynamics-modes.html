@@ -1,7 +1,15 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>6-DOF Flight Dynamics &amp; Mode Analysis | Ali Murtaza</title>
-<meta name="description" content="Decoupled longitudinal and lateral-directional linear models of a general-aviation aircraft, with the natural modes extracted live: short-period, phugoid, Dutch roll, roll subsidence and spiral, shown in the s-plane and the time domain.">
+<meta name="description" content="Decoupled longitudinal and lateral-directional linear state-space models of a general-aviation aircraft, with the natural modes extracted live and shown in">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icon-180.png">
+<meta property="og:title" content="6-DOF Flight Dynamics &amp; Mode Analysis | Ali Murtaza">
+<meta property="og:description" content="Decoupled longitudinal and lateral-directional linear state-space models of a general-aviation aircraft, with the natural modes extracted live and shown in">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aeroengrali.github.io/projects/flight-dynamics-modes.html">
+<meta property="og:image" content="https://aeroengrali.github.io/assets/projects/flight-dynamics-modes/header.svg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link rel="stylesheet" href="../style.css">
 </head><body>
@@ -10,29 +18,32 @@
 <a class="brand" href="../index.html">Ali&nbsp;Murtaza</a>
 <nav aria-label="Primary"><a href="../index.html#projects">Projects</a><a href="../index.html#skills">Skills</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a></nav>
 </div></header>
-<main id="main" class="proj">
-<div class="wrap">
-<p class="crumb"><a href="../index.html#projects">← All projects</a></p>
-<p class="eyebrow">Mar-Apr 2026</p>
+<main id="main" class="proj"><div class="wrap">
+<p class="crumb"><a href="../index.html#projects">&larr; All projects</a></p>
+<div class="pbanner"><img src="../assets/projects/flight-dynamics-modes/header.svg" alt="6-DOF Flight Dynamics &amp; Mode Analysis cover" width="1200" height="630"></div>
 <h1>6-DOF Flight Dynamics &amp; Mode Analysis</h1>
 <p class="lede">Eigenstructure of the aircraft natural modes</p>
-<div class="tags"><span class="tag alt">Flight Dynamics</span><span class="tag alt">GNC &amp; Controls</span></div>
-<p class="overview">Decoupled longitudinal and lateral-directional linear models of a general-aviation aircraft, with the natural modes extracted live: short-period, phugoid, Dutch roll, roll subsidence and spiral, shown in the s-plane and the time domain.</p>
+<div class="tags"><span class="tag alt">Flight Dynamics</span><span class="tag alt">GNC &amp; Controls</span> <span class="period">Mar-Apr 2026</span></div>
 
-<div class="cta"><a class="btn" href="https://github.com/aeroengrali/flight-dynamics-modes" rel="noopener">Source on GitHub</a></div>
 
-<section class="psec"><h2>Highlights</h2><ul class="hl"><li>Short-period ωn 3.60 rad/s, ζ 0.69; phugoid ωn 0.21 rad/s, ζ 0.08</li><li>Dutch roll ωn 2.38 rad/s, ζ 0.20; fast roll subsidence; slow stable spiral</li><li>Modes computed from the state matrices and classified automatically</li><li>Results consistent with published Navion-class values</li></ul></section>
+<section class="psec"><h2>Overview</h2><p class="overview">Decoupled longitudinal and lateral-directional linear state-space models of a general-aviation aircraft, with the natural modes extracted live and shown in both the s-plane and the time domain.</p></section>
+<section class="psec"><h2>The challenge</h2><p>An aircraft&#x27;s handling is governed by a handful of natural modes. The task is to build the linear models and characterise each mode&#x27;s frequency, damping and shape.</p></section>
+<section class="psec"><h2>Approach</h2>
+<div class="diagram"><img src="../assets/projects/flight-dynamics-modes/diagram.svg" alt="Pipeline diagram for 6-DOF Flight Dynamics &amp; Mode Analysis"></div>
+<ul class="approach"><li>Assemble the longitudinal [u, w, q, theta] and lateral [beta, p, r, phi] state matrices</li><li>Compute eigenvalues, damping and natural frequencies</li><li>Classify automatically into short-period, phugoid, Dutch roll, roll and spiral</li><li>Excite each mode with an initial-condition response</li></ul></section>
+<section class="psec"><h2>Results</h2><div class="metricwrap"><table class="metrics"><tbody><tr><td>Short-period</td><td>wn 3.60, zeta 0.69</td></tr><tr><td>Phugoid</td><td>wn 0.21, zeta 0.08</td></tr><tr><td>Dutch roll</td><td>wn 2.38, zeta 0.20</td></tr><tr><td>Roll / spiral</td><td>t_half 0.08 s / 77.6 s</td></tr></tbody></table></div><div class="gallery"><figure><img loading="lazy" src="../assets/projects/flight-dynamics-modes/01_splane_modes.png" alt="All five natural modes on the s-plane: stable, with characteristic frequencies and damping."><figcaption>All five natural modes on the s-plane: stable, with characteristic frequencies and damping.</figcaption></figure><figure><img loading="lazy" src="../assets/projects/flight-dynamics-modes/02_longitudinal_modes.png" alt="Longitudinal response: the fast short-period and the slow, lightly-damped phugoid."><figcaption>Longitudinal response: the fast short-period and the slow, lightly-damped phugoid.</figcaption></figure><figure><img loading="lazy" src="../assets/projects/flight-dynamics-modes/03_lateral_modes.png" alt="Lateral-directional response: Dutch roll, fast roll subsidence, and the slow spiral."><figcaption>Lateral-directional response: Dutch roll, fast roll subsidence, and the slow spiral.</figcaption></figure></div></section>
 
-<section class="psec"><h2>Results &amp; figures</h2><div class="gallery"><figure><img loading="lazy" src="../assets/projects/flight-dynamics-modes/01_splane_modes.png" alt="Natural modes on the s-plane"><figcaption>Natural modes on the s-plane</figcaption></figure><figure><img loading="lazy" src="../assets/projects/flight-dynamics-modes/02_longitudinal_modes.png" alt="Short-period and phugoid time responses"><figcaption>Short-period and phugoid time responses</figcaption></figure><figure><img loading="lazy" src="../assets/projects/flight-dynamics-modes/03_lateral_modes.png" alt="Dutch roll, roll and spiral responses"><figcaption>Dutch roll, roll and spiral responses</figcaption></figure></div></section>
-<section class="psec"><h2>Built with</h2><div class="tags"><span class="tag">MATLAB R2026a</span><span class="tag">Control System Toolbox</span><span class="tag">Modal analysis</span></div></section>
+<section class="psec"><h2>What it demonstrates</h2><p>Demonstrates linear flight-dynamics modelling, modal (eigenstructure) analysis, and interpretation of handling-quality modes in frequency and time.</p></section>
+<section class="psec"><h2>Built with</h2><div class="tags"><span class="tag">MATLAB R2026a</span><span class="tag">Control System Toolbox</span><span class="tag">Modal analysis</span></div>
+<div class="cta"><a class="btn" href="https://github.com/aeroengrali/flight-dynamics-modes" rel="noopener">Source on GitHub &rarr;</a></div></section>
 </div></main>
 <footer class="foot" id="contact"><div class="wrap">
-<h2>Contact</h2>
+<h2>Get in touch</h2>
 <p>Open to GNC, flight-control, simulation and aerospace R&amp;D roles, internships and graduate study.</p>
 <p class="links">
-<a href="mailto:aero.engr.ali@gmail.com">aero.engr.ali@gmail.com</a> ·
-<a href="https://github.com/aeroengrali" rel="noopener">GitHub</a> ·
-<a href="https://www.linkedin.com/in/aeroengrali/" rel="noopener">LinkedIn</a> ·
+<a href="mailto:aero.engr.ali@gmail.com">aero.engr.ali@gmail.com</a> &middot;
+<a href="https://github.com/aeroengrali" rel="noopener">GitHub</a> &middot;
+<a href="https://www.linkedin.com/in/aeroengrali/" rel="noopener">LinkedIn</a> &middot;
 <span>Islamabad, Pakistan</span></p>
-<p class="fine">© 2026 Ali Murtaza · BS Aerospace Engineering, Institute of Space Technology (IST), expected August 2026</p>
+<p class="fine">© 2026 Ali Murtaza &middot; BS Aerospace Engineering, Institute of Space Technology (IST), expected August 2026</p>
 </div></footer></body></html>

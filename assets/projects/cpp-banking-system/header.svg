@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="C++ Banking System (OOP)">
+<defs>
+<linearGradient id="bg07" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#0c2236"/><stop offset="1" stop-color="#081320"/></linearGradient>
+<radialGradient id="gl07" cx="0.82" cy="0.22" r="0.6">
+<stop offset="0" stop-color="#5566d6" stop-opacity="0.28"/><stop offset="1" stop-color="#5566d6" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1200" height="630" fill="url(#bg07)"/>
+<rect width="1200" height="630" fill="url(#gl07)"/>
+<rect x="0" y="0" width="12" height="630" fill="#5566d6"/>
+<g fill="none" stroke="#5566d6" stroke-width="3" opacity="0.6" stroke-linecap="round"><path d="M900 130 q-40 0 -40 50 t-40 50 q40 0 40 50 t40 50"/><path d="M1060 130 q40 0 40 50 t40 50 q-40 0 -40 50 t-40 50"/></g>
+<text x="1150" y="150" text-anchor="end" font-family="system-ui,Segoe UI,Arial" font-weight="800" font-size="150" fill="#ffffff" opacity="0.05">07</text>
+<text x="70" y="120" font-family="system-ui,Segoe UI,Arial" font-weight="700" font-size="22" letter-spacing="3" fill="#5566d6">SOFTWARE</text>
+<text x="70" y="318" font-family="system-ui,Segoe UI,Arial" font-weight="800" font-size="56" fill="#ffffff"><tspan x="70" dy="0">C++ Banking System (OOP)</tspan></text>
+<text x="70" y="370" font-family="system-ui,Segoe UI,Arial" font-size="27" fill="#aac3dc">Encapsulated accounts with MPIN authentication</text>
+<g transform="translate(70,520)"><rect width="50" height="34" rx="17" fill="#ffffff" opacity="0.08"/><text x="25" y="22" text-anchor="middle" fill="#cfe0f1" font-size="15" font-family="system-ui,Segoe UI,Arial">C++</text></g><g transform="translate(131.6,520)"><rect width="50" height="34" rx="17" fill="#ffffff" opacity="0.08"/><text x="25" y="22" text-anchor="middle" fill="#cfe0f1" font-size="15" font-family="system-ui,Segoe UI,Arial">OOP</text></g><g transform="translate(193.2,520)"><rect width="169" height="34" rx="17" fill="#ffffff" opacity="0.08"/><text x="85" y="22" text-anchor="middle" fill="#cfe0f1" font-size="15" font-family="system-ui,Segoe UI,Arial">Standard library</text></g>
+<text x="1150" y="545" text-anchor="end" font-family="system-ui,Segoe UI,Arial" font-size="20" fill="#7f9cb6">Nov 2022</text>
+</svg>

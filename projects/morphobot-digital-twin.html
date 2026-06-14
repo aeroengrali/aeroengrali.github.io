@@ -1,7 +1,15 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rover-Hover Morphobot Digital Twin | Ali Murtaza</title>
-<meta name="description" content="A MATLAB/Simulink digital twin of a two-mode rover ↔ hover transforming quadcopter whose motors sit inside its wheels. Covers flight dynamics, cascaded PID flight control, ESKF state estimation, skid-steer control and a mode-transition supervisor, paired with vendor-built hardware.">
+<meta name="description" content="A MATLAB/Simulink digital twin of a two-mode rover and hover transforming quadcopter whose motors sit inside its wheels. It covers flight dynamics, cascade">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icon-180.png">
+<meta property="og:title" content="Rover-Hover Morphobot Digital Twin | Ali Murtaza">
+<meta property="og:description" content="A MATLAB/Simulink digital twin of a two-mode rover and hover transforming quadcopter whose motors sit inside its wheels. It covers flight dynamics, cascade">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aeroengrali.github.io/projects/morphobot-digital-twin.html">
+<meta property="og:image" content="https://aeroengrali.github.io/assets/projects/morphobot-digital-twin/header.svg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link rel="stylesheet" href="../style.css">
 </head><body>
@@ -10,29 +18,32 @@
 <a class="brand" href="../index.html">Ali&nbsp;Murtaza</a>
 <nav aria-label="Primary"><a href="../index.html#projects">Projects</a><a href="../index.html#skills">Skills</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a></nav>
 </div></header>
-<main id="main" class="proj">
-<div class="wrap">
-<p class="crumb"><a href="../index.html#projects">← All projects</a></p>
-<p class="eyebrow">2025-2026</p>
+<main id="main" class="proj"><div class="wrap">
+<p class="crumb"><a href="../index.html#projects">&larr; All projects</a></p>
+<div class="pbanner"><img src="../assets/projects/morphobot-digital-twin/header.svg" alt="Rover-Hover Morphobot Digital Twin cover" width="1200" height="630"></div>
 <h1>Rover-Hover Morphobot Digital Twin</h1>
 <p class="lede">Final-year project (in progress)</p>
-<div class="tags"><span class="tag alt">GNC &amp; Controls</span><span class="tag alt">Flight Control</span></div>
-<p class="overview">A MATLAB/Simulink digital twin of a two-mode rover ↔ hover transforming quadcopter whose motors sit inside its wheels. Covers flight dynamics, cascaded PID flight control, ESKF state estimation, skid-steer control and a mode-transition supervisor, paired with vendor-built hardware.</p>
-<p class="note">High-level entry. Quantitative results and the full thesis are withheld until the FYP is defended.</p>
-<div class="cta"></div>
+<div class="tags"><span class="tag alt">GNC &amp; Controls</span><span class="tag alt">Flight Control</span> <span class="period">2025-2026</span></div>
+<p class="note">Intentionally high level. Quantitative results, parameter values and the full thesis are withheld until the project is defended.</p>
 
-<section class="psec"><h2>Highlights</h2><ul class="hl"><li>Two-mode transforming platform: flying quad and ground rover</li><li>Cascaded PID flight control and ESKF state estimation</li><li>Mode supervisor and controlled hover ↔ rover transition</li><li>Hardware-paired digital-twin workflow (motor-in-wheel build)</li></ul></section>
+<section class="psec"><h2>Overview</h2><p class="overview">A MATLAB/Simulink digital twin of a two-mode rover and hover transforming quadcopter whose motors sit inside its wheels. It covers flight dynamics, cascaded PID flight control, ESKF state estimation, skid-steer control and a mode-transition supervisor, paired with vendor-built hardware.</p></section>
+<section class="psec"><h2>The challenge</h2><p>A vehicle that both flies and drives has two dynamics regimes and a transition between them, modelled faithfully and paired with real hardware.</p></section>
+<section class="psec"><h2>Approach</h2>
+<div class="diagram"><img src="../assets/projects/morphobot-digital-twin/diagram.svg" alt="Pipeline diagram for Rover-Hover Morphobot Digital Twin"></div>
+<ul class="approach"><li>Model the quad flight dynamics and a cascaded PID flight controller</li><li>Estimate state with an Error-State Kalman Filter (ESKF)</li><li>Add skid-steer control for the ground mode</li><li>A mode supervisor manages the hover-to-rover transition</li></ul></section>
+<section class="psec"><h2>Results</h2><div class="metricwrap"><table class="metrics"><tbody><tr><td>Modes</td><td>hover + rover</td></tr><tr><td>Flight control</td><td>cascaded PID</td></tr><tr><td>Estimation</td><td>ESKF</td></tr><tr><td>Status</td><td>in progress</td></tr></tbody></table></div><div class="gallery"><figure><img loading="lazy" src="../assets/projects/morphobot-digital-twin/contact_sheet.png" alt="CAD part set of the transforming quadcopter (motor-in-wheel drive, lift arms, gearboxes, wheels)."><figcaption>CAD part set of the transforming quadcopter (motor-in-wheel drive, lift arms, gearboxes, wheels).</figcaption></figure><figure><img loading="lazy" src="../assets/projects/morphobot-digital-twin/hardware_01.jpg" alt="The distinctive motor-in-wheel hardware assembly."><figcaption>The distinctive motor-in-wheel hardware assembly.</figcaption></figure><figure><img loading="lazy" src="../assets/projects/morphobot-digital-twin/hardware_03.jpg" alt="The physical build of the morphobot."><figcaption>The physical build of the morphobot.</figcaption></figure></div></section>
 
-<section class="psec"><h2>Results &amp; figures</h2><div class="gallery"><figure><img loading="lazy" src="../assets/projects/morphobot-digital-twin/contact_sheet.png" alt="CAD part set of the transforming quadcopter"><figcaption>CAD part set of the transforming quadcopter</figcaption></figure><figure><img loading="lazy" src="../assets/projects/morphobot-digital-twin/hardware_01.jpg" alt="Motor-in-wheel hardware assembly"><figcaption>Motor-in-wheel hardware assembly</figcaption></figure><figure><img loading="lazy" src="../assets/projects/morphobot-digital-twin/hardware_03.jpg" alt="Physical build of the morphobot"><figcaption>Physical build of the morphobot</figcaption></figure></div></section>
-<section class="psec"><h2>Built with</h2><div class="tags"><span class="tag">MATLAB / Simulink</span><span class="tag">Stateflow</span></div></section>
+<section class="psec"><h2>What it demonstrates</h2><p>A hardware-paired digital-twin workflow spanning flight dynamics, control, estimation and mode transition for a transforming robot.</p></section>
+<section class="psec"><h2>Built with</h2><div class="tags"><span class="tag">MATLAB / Simulink</span><span class="tag">Stateflow</span></div>
+<div class="cta"></div></section>
 </div></main>
 <footer class="foot" id="contact"><div class="wrap">
-<h2>Contact</h2>
+<h2>Get in touch</h2>
 <p>Open to GNC, flight-control, simulation and aerospace R&amp;D roles, internships and graduate study.</p>
 <p class="links">
-<a href="mailto:aero.engr.ali@gmail.com">aero.engr.ali@gmail.com</a> ·
-<a href="https://github.com/aeroengrali" rel="noopener">GitHub</a> ·
-<a href="https://www.linkedin.com/in/aeroengrali/" rel="noopener">LinkedIn</a> ·
+<a href="mailto:aero.engr.ali@gmail.com">aero.engr.ali@gmail.com</a> &middot;
+<a href="https://github.com/aeroengrali" rel="noopener">GitHub</a> &middot;
+<a href="https://www.linkedin.com/in/aeroengrali/" rel="noopener">LinkedIn</a> &middot;
 <span>Islamabad, Pakistan</span></p>
-<p class="fine">© 2026 Ali Murtaza · BS Aerospace Engineering, Institute of Space Technology (IST), expected August 2026</p>
+<p class="fine">© 2026 Ali Murtaza &middot; BS Aerospace Engineering, Institute of Space Technology (IST), expected August 2026</p>
 </div></footer></body></html>

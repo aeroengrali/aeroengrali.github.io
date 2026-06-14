@@ -1,7 +1,15 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GPS Single-Point Positioning + EKF | Ali Murtaza</title>
-<meta name="description" content="A GPS-only pseudorange positioning engine in modern C++17: RINEX 3.x parsing, broadcast orbit/clock modelling, weighted least squares and an EKF, validated against precise IGS SP3 orbits with an independent Python audit.">
+<meta name="description" content="A GPS-only pseudorange positioning engine in modern C++17: RINEX 3.x parsing, broadcast orbit and clock modelling, weighted least squares and an EKF, valid">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icon-180.png">
+<meta property="og:title" content="GPS Single-Point Positioning + EKF | Ali Murtaza">
+<meta property="og:description" content="A GPS-only pseudorange positioning engine in modern C++17: RINEX 3.x parsing, broadcast orbit and clock modelling, weighted least squares and an EKF, valid">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aeroengrali.github.io/projects/gps-spp-ekf.html">
+<meta property="og:image" content="https://aeroengrali.github.io/assets/projects/gps-spp-ekf/header.svg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link rel="stylesheet" href="../style.css">
 </head><body>
@@ -10,29 +18,32 @@
 <a class="brand" href="../index.html">Ali&nbsp;Murtaza</a>
 <nav aria-label="Primary"><a href="../index.html#projects">Projects</a><a href="../index.html#skills">Skills</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a></nav>
 </div></header>
-<main id="main" class="proj">
-<div class="wrap">
-<p class="crumb"><a href="../index.html#projects">← All projects</a></p>
-<p class="eyebrow">Jan-Feb 2026</p>
+<main id="main" class="proj"><div class="wrap">
+<p class="crumb"><a href="../index.html#projects">&larr; All projects</a></p>
+<div class="pbanner"><img src="../assets/projects/gps-spp-ekf/header.svg" alt="GPS Single-Point Positioning + EKF cover" width="1200" height="630"></div>
 <h1>GPS Single-Point Positioning + EKF</h1>
 <p class="lede">A from-scratch GNSS pipeline in C++17</p>
-<div class="tags"><span class="tag alt">Estimation &amp; Navigation</span><span class="tag alt">Software</span></div>
-<p class="overview">A GPS-only pseudorange positioning engine in modern C++17: RINEX 3.x parsing, broadcast orbit/clock modelling, weighted least squares and an EKF, validated against precise IGS SP3 orbits with an independent Python audit.</p>
+<div class="tags"><span class="tag alt">Estimation &amp; Navigation</span><span class="tag alt">Software</span> <span class="period">Jan-Feb 2026</span></div>
 
-<div class="cta"><a class="btn" href="https://github.com/aeroengrali/gps-spp-ekf" rel="noopener">Source on GitHub</a></div>
 
-<section class="psec"><h2>Highlights</h2><ul class="hl"><li>Full-day EKF 3D RMS 2.03 m, improving on least squares (2.52 m)</li><li>Broadcast orbits agree with precise IGS SP3 to a few metres (95th-pct 3D 2.37 m)</li><li>RINEX 3.x observation/navigation parsing, ephemeris health/fit checks</li><li>Deterministic tests plus an independent Python results audit</li></ul></section>
+<section class="psec"><h2>Overview</h2><p class="overview">A GPS-only pseudorange positioning engine in modern C++17: RINEX 3.x parsing, broadcast orbit and clock modelling, weighted least squares and an EKF, validated against precise IGS SP3 orbits with an independent Python audit.</p></section>
+<section class="psec"><h2>The challenge</h2><p>Turning raw RINEX observations into a position fix means modelling satellite orbits and clocks from the navigation message and estimating the receiver state robustly.</p></section>
+<section class="psec"><h2>Approach</h2>
+<div class="diagram"><img src="../assets/projects/gps-spp-ekf/diagram.svg" alt="Pipeline diagram for GPS Single-Point Positioning + EKF"></div>
+<ul class="approach"><li>Parse RINEX 3.x observation and navigation files (priority/fallback selection)</li><li>Model broadcast orbits and clocks (Kepler, relativistic, Earth-rotation corrections)</li><li>Estimate position with weighted least squares and an EKF</li><li>Validate against precise IGS SP3 orbits; deterministic tests + independent audit</li></ul></section>
+<section class="psec"><h2>Results</h2><div class="metricwrap"><table class="metrics"><tbody><tr><td>Full-day LS 3D RMS</td><td>2.52 m</td></tr><tr><td>Full-day EKF 3D RMS</td><td>2.03 m</td></tr><tr><td>SP3 95th-pct 3D</td><td>2.37 m</td></tr><tr><td>Language</td><td>C++17 (CMake/Ninja)</td></tr></tbody></table></div><div class="gallery"><figure><img loading="lazy" src="../assets/projects/gps-spp-ekf/01_accuracy.png" alt="Full-day acceptance run: the EKF improves on least squares, and broadcast orbits agree with precise IGS products to a few metres."><figcaption>Full-day acceptance run: the EKF improves on least squares, and broadcast orbits agree with precise IGS products to a few metres.</figcaption></figure></div></section>
 
-<section class="psec"><h2>Results &amp; figures</h2><div class="gallery"><figure><img loading="lazy" src="../assets/projects/gps-spp-ekf/01_accuracy.png" alt="GPS-only SPP+EKF accuracy vs precise IGS products"><figcaption>GPS-only SPP+EKF accuracy vs precise IGS products</figcaption></figure></div></section>
-<section class="psec"><h2>Built with</h2><div class="tags"><span class="tag">C++17</span><span class="tag">CMake / Ninja</span><span class="tag">RINEX, SP3</span><span class="tag">EKF &amp; WLS</span></div></section>
+<section class="psec"><h2>What it demonstrates</h2><p>Demonstrates from-scratch GNSS engineering: file parsing, orbit/clock modelling, least-squares and Kalman estimation, validation, and disciplined testing in C++.</p></section>
+<section class="psec"><h2>Built with</h2><div class="tags"><span class="tag">C++17</span><span class="tag">CMake / Ninja</span><span class="tag">RINEX, SP3</span><span class="tag">EKF &amp; WLS</span></div>
+<div class="cta"><a class="btn" href="https://github.com/aeroengrali/gps-spp-ekf" rel="noopener">Source on GitHub &rarr;</a></div></section>
 </div></main>
 <footer class="foot" id="contact"><div class="wrap">
-<h2>Contact</h2>
+<h2>Get in touch</h2>
 <p>Open to GNC, flight-control, simulation and aerospace R&amp;D roles, internships and graduate study.</p>
 <p class="links">
-<a href="mailto:aero.engr.ali@gmail.com">aero.engr.ali@gmail.com</a> ·
-<a href="https://github.com/aeroengrali" rel="noopener">GitHub</a> ·
-<a href="https://www.linkedin.com/in/aeroengrali/" rel="noopener">LinkedIn</a> ·
+<a href="mailto:aero.engr.ali@gmail.com">aero.engr.ali@gmail.com</a> &middot;
+<a href="https://github.com/aeroengrali" rel="noopener">GitHub</a> &middot;
+<a href="https://www.linkedin.com/in/aeroengrali/" rel="noopener">LinkedIn</a> &middot;
 <span>Islamabad, Pakistan</span></p>
-<p class="fine">© 2026 Ali Murtaza · BS Aerospace Engineering, Institute of Space Technology (IST), expected August 2026</p>
+<p class="fine">© 2026 Ali Murtaza &middot; BS Aerospace Engineering, Institute of Space Technology (IST), expected August 2026</p>
 </div></footer></body></html>

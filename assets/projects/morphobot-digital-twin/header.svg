@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Rover-Hover Morphobot Digital Twin">
+<defs>
+<linearGradient id="bg09" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#0c2236"/><stop offset="1" stop-color="#081320"/></linearGradient>
+<radialGradient id="gl09" cx="0.82" cy="0.22" r="0.6">
+<stop offset="0" stop-color="#1f9e5a" stop-opacity="0.28"/><stop offset="1" stop-color="#1f9e5a" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1200" height="630" fill="url(#bg09)"/>
+<rect width="1200" height="630" fill="url(#gl09)"/>
+<rect x="0" y="0" width="12" height="630" fill="#1f9e5a"/>
+<g fill="none" stroke="#1f9e5a" stroke-width="2.5" opacity="0.6" transform="translate(990,185)"><circle r="58"/><circle r="22"/><rect x="-6" y="-78" width="12" height="20" rx="2" transform="rotate(0)"/><rect x="-6" y="-78" width="12" height="20" rx="2" transform="rotate(45)"/><rect x="-6" y="-78" width="12" height="20" rx="2" transform="rotate(90)"/><rect x="-6" y="-78" width="12" height="20" rx="2" transform="rotate(135)"/><rect x="-6" y="-78" width="12" height="20" rx="2" transform="rotate(180)"/><rect x="-6" y="-78" width="12" height="20" rx="2" transform="rotate(225)"/><rect x="-6" y="-78" width="12" height="20" rx="2" transform="rotate(270)"/><rect x="-6" y="-78" width="12" height="20" rx="2" transform="rotate(315)"/></g>
+<text x="1150" y="150" text-anchor="end" font-family="system-ui,Segoe UI,Arial" font-weight="800" font-size="150" fill="#ffffff" opacity="0.05">09</text>
+<text x="70" y="120" font-family="system-ui,Segoe UI,Arial" font-weight="700" font-size="22" letter-spacing="3" fill="#1f9e5a">GNC &amp; CONTROLS</text>
+<text x="70" y="290" font-family="system-ui,Segoe UI,Arial" font-weight="800" font-size="56" fill="#ffffff"><tspan x="70" dy="0">Rover-Hover Morphobot</tspan><tspan x="70" dy="66">Digital Twin</tspan></text>
+<text x="70" y="408" font-family="system-ui,Segoe UI,Arial" font-size="27" fill="#aac3dc">Final-year project (in progress)</text>
+<g transform="translate(70,520)"><rect width="178" height="34" rx="17" fill="#ffffff" opacity="0.08"/><text x="89" y="22" text-anchor="middle" fill="#cfe0f1" font-size="15" font-family="system-ui,Segoe UI,Arial">MATLAB / Simulink</text></g><g transform="translate(260.4,520)"><rect width="105" height="34" rx="17" fill="#ffffff" opacity="0.08"/><text x="52" y="22" text-anchor="middle" fill="#cfe0f1" font-size="15" font-family="system-ui,Segoe UI,Arial">Stateflow</text></g>
+<text x="1150" y="545" text-anchor="end" font-family="system-ui,Segoe UI,Arial" font-size="20" fill="#7f9cb6">2025-2026</text>
+</svg>

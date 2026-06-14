@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="6-DOF Flight Dynamics &amp; Mode Analysis">
+<defs>
+<linearGradient id="bg03" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#0c2236"/><stop offset="1" stop-color="#081320"/></linearGradient>
+<radialGradient id="gl03" cx="0.82" cy="0.22" r="0.6">
+<stop offset="0" stop-color="#7b61ff" stop-opacity="0.28"/><stop offset="1" stop-color="#7b61ff" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1200" height="630" fill="url(#bg03)"/>
+<rect width="1200" height="630" fill="url(#gl03)"/>
+<rect x="0" y="0" width="12" height="630" fill="#7b61ff"/>
+<polyline points="760,200 776,221 792,240 808,256 824,266 840,269 856,266 872,257 888,241 904,222 920,201 936,180 952,160 968,145 984,134 1000,131 1016,133 1032,143 1048,158 1064,177 1080,198 1096,219 1112,239 1128,255 1144,265 1160,269 1176,267 1192,258" fill="none" stroke="#7b61ff" stroke-width="3" opacity="0.7"/>
+<text x="1150" y="150" text-anchor="end" font-family="system-ui,Segoe UI,Arial" font-weight="800" font-size="150" fill="#ffffff" opacity="0.05">03</text>
+<text x="70" y="120" font-family="system-ui,Segoe UI,Arial" font-weight="700" font-size="22" letter-spacing="3" fill="#7b61ff">FLIGHT DYNAMICS</text>
+<text x="70" y="290" font-family="system-ui,Segoe UI,Arial" font-weight="800" font-size="56" fill="#ffffff"><tspan x="70" dy="0">6-DOF Flight Dynamics &amp; Mode</tspan><tspan x="70" dy="66">Analysis</tspan></text>
+<text x="70" y="408" font-family="system-ui,Segoe UI,Arial" font-size="27" fill="#aac3dc">Eigenstructure of the aircraft natural modes</text>
+<g transform="translate(70,520)"><rect width="142" height="34" rx="17" fill="#ffffff" opacity="0.08"/><text x="71" y="22" text-anchor="middle" fill="#cfe0f1" font-size="15" font-family="system-ui,Segoe UI,Arial">MATLAB R2026a</text></g><g transform="translate(223.6,520)"><rect width="224" height="34" rx="17" fill="#ffffff" opacity="0.08"/><text x="112" y="22" text-anchor="middle" fill="#cfe0f1" font-size="15" font-family="system-ui,Segoe UI,Arial">Control System Toolbox</text></g><g transform="translate(460.0,520)"><rect width="151" height="34" rx="17" fill="#ffffff" opacity="0.08"/><text x="75" y="22" text-anchor="middle" fill="#cfe0f1" font-size="15" font-family="system-ui,Segoe UI,Arial">Modal analysis</text></g>
+<text x="1150" y="545" text-anchor="end" font-family="system-ui,Segoe UI,Arial" font-size="20" fill="#7f9cb6">Mar-Apr 2026</text>
+</svg>
