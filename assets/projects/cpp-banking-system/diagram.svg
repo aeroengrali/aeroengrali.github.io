@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-label="Banking system class and flow">
+<rect width="760" height="300" fill="#0b1f33"/>
+<style>.b{fill:#12324f;stroke:#3b82c4;stroke-width:2}.t{fill:#e8f1fb;font:600 15px system-ui}.s{fill:#9cc3e6;font:13px system-ui}.a{stroke:#5fa8e0;stroke-width:2.5;marker-end:url(#ar2);fill:none}</style>
+<defs><marker id="ar2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#5fa8e0"/></marker></defs>
+<rect class="b" x="40" y="60" width="240" height="180" rx="10"/>
+<text class="t" x="60" y="90">class bankAccount</text><line x1="40" y1="100" x2="280" y2="100" stroke="#3b82c4"/>
+<text class="s" x="60" y="125">- MPIN : int</text><text class="s" x="60" y="148">- balance : double</text><text class="s" x="60" y="171">- name, regno</text>
+<text class="s" x="60" y="200">+ deposit() / withdraw()</text><text class="s" x="60" y="222">+ login(MPIN)</text>
+<rect class="b" x="430" y="50" width="290" height="50" rx="8"/><text class="s" x="450" y="80">Login (MPIN authentication)</text>
+<rect class="b" x="430" y="120" width="290" height="50" rx="8"/><text class="s" x="450" y="150">Deposit / Withdraw / Balance</text>
+<rect class="b" x="430" y="190" width="290" height="50" rx="8"/><text class="s" x="450" y="220">Policy · Security · Terms</text>
+<line class="a" x1="280" y1="150" x2="425" y2="75"/><line class="a" x1="280" y1="150" x2="425" y2="145"/><line class="a" x1="280" y1="150" x2="425" y2="215"/>
+</svg>

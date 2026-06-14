@@ -1,0 +1,38 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GNSS/INS Loosely-Coupled Navigation | Ali Murtaza</title>
+<meta name="description" content="A strapdown inertial navigator fused with 1 Hz GPS by an Extended Kalman Filter that estimates position, velocity, heading and the IMU biases. A 25 s GPS dropout shows inertial coasting (dead reckoning) versus unaided INS drift.">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="../style.css">
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav"><div class="wrap navin">
+<a class="brand" href="../index.html">Ali&nbsp;Murtaza</a>
+<nav aria-label="Primary"><a href="../index.html#projects">Projects</a><a href="../index.html#skills">Skills</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a></nav>
+</div></header>
+<main id="main" class="proj">
+<div class="wrap">
+<p class="crumb"><a href="../index.html#projects">← All projects</a></p>
+<p class="eyebrow">May 2026</p>
+<h1>GNSS/INS Loosely-Coupled Navigation</h1>
+<p class="lede">8-state EKF fusing IMU and GPS, with online bias estimation</p>
+<div class="tags"><span class="tag alt">Estimation &amp; Navigation</span><span class="tag alt">GNC &amp; Controls</span></div>
+<p class="overview">A strapdown inertial navigator fused with 1 Hz GPS by an Extended Kalman Filter that estimates position, velocity, heading and the IMU biases. A 25 s GPS dropout shows inertial coasting (dead reckoning) versus unaided INS drift.</p>
+
+<div class="cta"><a class="btn" href="https://github.com/aeroengrali/gnss-ins-navigation" rel="noopener">Source on GitHub</a></div>
+
+<section class="psec"><h2>Highlights</h2><ul class="hl"><li>EKF horizontal RMS 2.5 m (at the GPS noise floor)</li><li>Dropout error bounded to ~9.5 m over 25 s; unaided INS drifts ~500 m</li><li>Gyro/accel biases recovered to within ~2% of truth</li><li>Analytic EKF Jacobian; shared mechanisation isolates the value of fusion</li></ul></section>
+
+<section class="psec"><h2>Results &amp; figures</h2><div class="gallery"><figure><img loading="lazy" src="../assets/projects/gnss-ins-navigation/01_trajectory.png" alt="Truth vs inertial-only vs GNSS/INS EKF trajectory"><figcaption>Truth vs inertial-only vs GNSS/INS EKF trajectory</figcaption></figure><figure><img loading="lazy" src="../assets/projects/gnss-ins-navigation/02_position_error.png" alt="Position error: INS-only vs EKF with dropout shaded"><figcaption>Position error: INS-only vs EKF with dropout shaded</figcaption></figure><figure><img loading="lazy" src="../assets/projects/gnss-ins-navigation/03_dropout_and_bias.png" alt="Dropout coasting and IMU-bias convergence"><figcaption>Dropout coasting and IMU-bias convergence</figcaption></figure></div></section>
+<section class="psec"><h2>Built with</h2><div class="tags"><span class="tag">MATLAB R2026a</span><span class="tag">Extended Kalman Filter</span><span class="tag">Strapdown INS</span></div></section>
+</div></main>
+<footer class="foot" id="contact"><div class="wrap">
+<h2>Contact</h2>
+<p>Open to GNC, flight-control, simulation and aerospace R&amp;D roles, internships and graduate study.</p>
+<p class="links">
+<a href="mailto:aero.engr.ali@gmail.com">aero.engr.ali@gmail.com</a> ·
+<a href="https://github.com/aeroengrali" rel="noopener">GitHub</a> ·
+<a href="https://www.linkedin.com/in/aeroengrali/" rel="noopener">LinkedIn</a> ·
+<span>Islamabad, Pakistan</span></p>
+<p class="fine">© 2026 Ali Murtaza · BS Aerospace Engineering, Institute of Space Technology (IST), expected August 2026</p>
+</div></footer></body></html>

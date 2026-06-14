@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>Quadcopter attitude (3D demo)</title>
+<style>html,body{margin:0;height:100%;background:#0b1f33;color:#cfe2f5;font:14px system-ui;overflow:hidden}
+#hud{position:fixed;left:12px;top:10px;background:rgba(8,21,34,.7);padding:8px 12px;border-radius:8px;line-height:1.5}
+#hud b{color:#fff}</style></head><body>
+<div id="hud">Quadcopter attitude (simulated)<br><span id="t">t = 0.0 s</span> · <span id="rpy">roll 0° pitch 0° yaw 0°</span><br><span style="opacity:.7">drag to orbit · loops automatically</span></div>
+<script type="module">
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js';
+import {OrbitControls} from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js';
+const scene=new THREE.Scene(); scene.background=new THREE.Color(0x0b1f33);
+const cam=new THREE.PerspectiveCamera(50,innerWidth/innerHeight,0.1,100); cam.position.set(3.2,2.4,3.6);
+const rnd=new THREE.WebGLRenderer({antialias:true}); rnd.setSize(innerWidth,innerHeight); rnd.setPixelRatio(Math.min(devicePixelRatio,2)); document.body.appendChild(rnd.domElement);
+const ctr=new OrbitControls(cam,rnd.domElement); ctr.enableDamping=true; ctr.enablePan=false;
+scene.add(new THREE.AmbientLight(0xffffff,0.7)); const d=new THREE.DirectionalLight(0xffffff,1.1); d.position.set(5,8,4); scene.add(d);
+const grid=new THREE.GridHelper(12,12,0x274a66,0x18324a); scene.add(grid);
+scene.add(new THREE.AxesHelper(1.6));
+// quad: central body + 4 arms + rotors
+const quad=new THREE.Group();
+const bodyMat=new THREE.MeshStandardMaterial({color:0x2c3e50,metalness:.3,roughness:.5});
+const armMat=new THREE.MeshStandardMaterial({color:0x34495e});
+const rotorMat=[0xd92a2a,0x1a73b8,0x2aa14e,0xeab308].map(c=>new THREE.MeshStandardMaterial({color:c}));
+quad.add(new THREE.Mesh(new THREE.BoxGeometry(0.5,0.16,0.5),bodyMat));
+const L=1.0; const pos=[[L,L],[-L,L],[-L,-L],[L,-L]];
+pos.forEach((p,i)=>{const a=new THREE.Mesh(new THREE.BoxGeometry(0.07,0.05,1.4),armMat);
+ a.position.set(p[0]/2,0,p[1]/2); a.lookAt(0,0,0); quad.add(a);
+ const r=new THREE.Mesh(new THREE.CylinderGeometry(0.34,0.34,0.03,28),rotorMat[i]);
+ r.position.set(p[0],0.09,p[1]); r.userData.spin=true; quad.add(r);});
+scene.add(quad);
+let traj=[[0,0,0,0]];
+fetch('attitude_trajectory.csv').then(r=>r.text()).then(t=>{
+ traj=t.trim().split(/\r?\n/).map(l=>l.split(',').map(Number)).filter(a=>a.length>=4&&!isNaN(a[0]));
+}).catch(()=>{});
+const tEl=document.getElementById('t'), rpyEl=document.getElementById('rpy');
+let k=0, last=performance.now(), acc=0;
+function frame(now){requestAnimationFrame(frame);
+ const dt=(now-last)/1000; last=now; acc+=dt;
+ if(traj.length>1){ if(acc>0.04){acc=0; k=(k+1)%traj.length;}
+  const [tt,roll,pitch,yaw]=traj[k];
+  quad.rotation.set(THREE.MathUtils.degToRad(roll),THREE.MathUtils.degToRad(yaw),THREE.MathUtils.degToRad(pitch),'XYZ');
+  tEl.textContent='t = '+tt.toFixed(1)+' s';
+  rpyEl.textContent=`roll ${roll.toFixed(0)}° pitch ${pitch.toFixed(0)}° yaw ${yaw.toFixed(0)}°`;}
+ quad.children.forEach(c=>{if(c.userData.spin)c.rotation.y+=0.4;});
+ ctr.update(); rnd.render(scene,cam);}
+requestAnimationFrame(frame);
+addEventListener('resize',()=>{cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix();rnd.setSize(innerWidth,innerHeight);});
+</script></body></html>

@@ -1,0 +1,38 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quadcopter Attitude Controller | Ali Murtaza</title>
+<meta name="description" content="A 0.5 m-class quadrotor stabilised by an outer proportional angle loop and an inner PID rate loop, with gyroscopic feedforward, actuator saturation and anti-windup. Tuned to a crisp, low-overshoot response and tested against a torque-pulse disturbance.">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="../style.css">
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav"><div class="wrap navin">
+<a class="brand" href="../index.html">Ali&nbsp;Murtaza</a>
+<nav aria-label="Primary"><a href="../index.html#projects">Projects</a><a href="../index.html#skills">Skills</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a></nav>
+</div></header>
+<main id="main" class="proj">
+<div class="wrap">
+<p class="crumb"><a href="../index.html#projects">← All projects</a></p>
+<p class="eyebrow">Apr-May 2026</p>
+<h1>Quadcopter Attitude Controller</h1>
+<p class="lede">Cascaded PID attitude stabilisation with disturbance rejection</p>
+<div class="tags"><span class="tag alt">GNC &amp; Controls</span><span class="tag alt">Flight Control</span></div>
+<p class="overview">A 0.5 m-class quadrotor stabilised by an outer proportional angle loop and an inner PID rate loop, with gyroscopic feedforward, actuator saturation and anti-windup. Tuned to a crisp, low-overshoot response and tested against a torque-pulse disturbance.</p>
+
+<div class="cta"><a class="btn" href="https://github.com/aeroengrali/quadcopter-attitude-control" rel="noopener">Source on GitHub</a><a class="btn ghost" href="quad-demo.html">Open 3D demo</a></div>
+
+<section class="psec"><h2>Highlights</h2><ul class="hl"><li>Rise time 0.45 s, settling 0.69 s, overshoot 1.2%, steady-state error 0.07°</li><li>Disturbance pulse rejected within 0.5 s</li><li>1 kHz fixed-step RK4 plant with rate-gyro noise and ±0.6 N·m saturation</li><li>Interactive 3D viewer driven by the simulated attitude</li></ul></section>
+<section class="psec"><h2>Interactive 3D</h2><iframe class="demo" src="quad-demo.html" title="Interactive 3D attitude viewer" loading="lazy"></iframe></section>
+<section class="psec"><h2>Results &amp; figures</h2><div class="gallery"><figure><img loading="lazy" src="../assets/projects/quadcopter-attitude-control/01_attitude_tracking.png" alt="Attitude tracking: roll, pitch and yaw following step commands"><figcaption>Attitude tracking: roll, pitch and yaw following step commands</figcaption></figure><figure><img loading="lazy" src="../assets/projects/quadcopter-attitude-control/02_body_rates.png" alt="Body angular rates vs rate setpoints"><figcaption>Body angular rates vs rate setpoints</figcaption></figure><figure><img loading="lazy" src="../assets/projects/quadcopter-attitude-control/03_control_torques.png" alt="Commanded control torques with saturation"><figcaption>Commanded control torques with saturation</figcaption></figure><figure><img loading="lazy" src="../assets/projects/quadcopter-attitude-control/04_disturbance_rejection.png" alt="Roll-axis disturbance rejection"><figcaption>Roll-axis disturbance rejection</figcaption></figure></div></section>
+<section class="psec"><h2>Built with</h2><div class="tags"><span class="tag">MATLAB R2026a</span><span class="tag">Cascaded PID</span><span class="tag">RK4 integration</span></div></section>
+</div></main>
+<footer class="foot" id="contact"><div class="wrap">
+<h2>Contact</h2>
+<p>Open to GNC, flight-control, simulation and aerospace R&amp;D roles, internships and graduate study.</p>
+<p class="links">
+<a href="mailto:aero.engr.ali@gmail.com">aero.engr.ali@gmail.com</a> ·
+<a href="https://github.com/aeroengrali" rel="noopener">GitHub</a> ·
+<a href="https://www.linkedin.com/in/aeroengrali/" rel="noopener">LinkedIn</a> ·
+<span>Islamabad, Pakistan</span></p>
+<p class="fine">© 2026 Ali Murtaza · BS Aerospace Engineering, Institute of Space Technology (IST), expected August 2026</p>
+</div></footer></body></html>

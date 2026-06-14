@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 280" role="img" aria-label="Sense, decide, actuate pipeline">
+<rect width="760" height="280" fill="#0b1f33"/>
+<style>.b{fill:#12324f;stroke:#3b82c4;stroke-width:2;rx:10}.t{fill:#e8f1fb;font:600 16px system-ui;text-anchor:middle}.s{fill:#9cc3e6;font:13px system-ui;text-anchor:middle}.a{stroke:#5fa8e0;stroke-width:2.5;marker-end:url(#ar);fill:none}</style>
+<defs><marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#5fa8e0"/></marker></defs>
+<rect class="b" x="30" y="90" width="170" height="100" rx="10"/><text class="t" x="115" y="125">3× HC-SR04</text><text class="s" x="115" y="150">ultrasonic ranges</text><text class="s" x="115" y="168">L / C / R</text>
+<rect class="b" x="295" y="90" width="170" height="100" rx="10"/><text class="t" x="380" y="120">Decision logic</text><text class="s" x="380" y="144">nearest-bearing</text><text class="s" x="380" y="162">search / track</text>
+<rect class="b" x="560" y="90" width="170" height="100" rx="10"/><text class="t" x="645" y="125">Pan/Tilt servos</text><text class="s" x="645" y="150">centre target</text><text class="s" x="645" y="168">+ LED status</text>
+<line class="a" x1="200" y1="140" x2="290" y2="140"/><line class="a" x1="465" y1="140" x2="555" y2="140"/>
+<text class="s" x="380" y="40" style="font:600 17px system-ui;fill:#e8f1fb">Arduino Mega 2560: real-time scan-and-track loop</text>
+</svg>
