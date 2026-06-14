@@ -198,7 +198,8 @@ proj(id="06-ultrasonic-tracker", slug="ultrasonic-pan-tilt-tracker",
      outcomes="Demonstrates embedded real-time sensing, multi-sensor bearing estimation, closed-loop "
               "actuator control, and a search/track state machine on constrained hardware.",
      tech=["Arduino (C/C++)", "HC-SR04 sonar", "Servo control"],
-     figs=[])
+     figs=[("06-ultrasonic-tracker", "hardware_tracker.jpg",
+            "The assembled tracker: an Arduino driving a dual-servo pan/tilt head and a three-sensor ultrasonic array on a custom mount.")])
 
 proj(id="07-cpp-banking", slug="cpp-banking-system",
      num="07", title="C++ Banking System (OOP)",
@@ -223,7 +224,8 @@ proj(id="07-cpp-banking", slug="cpp-banking-system",
      tech=["C++", "OOP", "Standard library"],
      note="A four-person team project, credited as such. Ali contributed the class design and core "
           "account/transaction logic.",
-     figs=[])
+     figs=[("07-cpp-banking", "banking_code.png",
+            "The bankAccount class: balance and MPIN encapsulated as private members, with guarded deposit, withdrawal and authenticated access.")])
 
 proj(id="08-a320-cad", slug="a320-solidworks",
      num="08", title="Airbus A320 SolidWorks CAD",
